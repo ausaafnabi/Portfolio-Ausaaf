@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -60,7 +59,13 @@
     "vaul": "^0.9.6",
     "zod": "^3.24.1",
     "@tailwindcss/typography": "latest",
-    "d3": "latest"
+    "d3": "latest",
+    "react-markdown": "latest",
+    "remark-gfm": "latest",
+    "rehype-raw": "latest",
+    "rehype-sanitize": "latest",
+    "react-syntax-highlighter": "latest",
+    "uuid": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",

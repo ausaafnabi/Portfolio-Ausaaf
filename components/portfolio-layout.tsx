@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Code, Github, Layers, Mail, User, BookOpen } from "lucide-react"
+import { Code, Github, Layers, Mail, User, BookOpen, FileText } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -23,6 +23,8 @@ import {
 import { personalData } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
+import { ChatButton } from "@/components/chat/chat-button"
+import { Footer } from "@/components/footer"
 
 interface PortfolioLayoutProps {
   children: React.ReactNode
@@ -68,7 +70,7 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen bg-background">
         <Sidebar variant="inset" className="border-r border-border/50">
           <SidebarHeader className="flex flex-col gap-0 py-4">
             <div className="flex items-center px-4">
@@ -108,6 +110,12 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
                     >
                       <Github className="h-4 w-4" />
                       <span>Projects</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                  <SidebarMenuItem>
+                    <SidebarMenuButton isActive={activeSection === "blog"} onClick={() => scrollToSection("blog")}>
+                      <FileText className="h-4 w-4" />
+                      <span>Blog</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
@@ -158,7 +166,7 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
           </SidebarFooter>
           <SidebarRail />
         </Sidebar>
-        <SidebarInset className="bg-background">
+        <SidebarInset className="bg-background flex flex-col">
           <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b border-border/50 bg-background/95 px-6 backdrop-blur">
             <SidebarTrigger />
             <div className="flex items-center text-sm font-medium">
@@ -168,8 +176,11 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
           <main className="flex-1 overflow-auto">
             <div className="container max-w-4xl py-6 md:py-12">{children}</div>
           </main>
+          <Footer />
         </SidebarInset>
       </div>
+
+      <ChatButton />
     </SidebarProvider>
   )
 }
