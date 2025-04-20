@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume - Ausaaf Nabi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .item {
+            margin-bottom: 15px;
+        }
+        .item-title {
+            font-weight: bold;
+        }
+        .item-subtitle {
+            font-style: italic;
+        }
+        .item-date {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ausaaf Nabi</h1>
+    <p>Software Engineer & Researcher</p>
+    <p>Email: nabiausaaf@gmail.com | Location: Netherlands</p>
+    
+    <div class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="item">
+            <div class="item-title">Software Engineer</div>
+            <div class="item-subtitle">VIRSIGN</div>
+            <div class="item-date">January 2024 - February 2025</div>
+            <ul>
+                <li>Developed 3D Computer Vision models for crane automation</li>
+                <li>Engineered Dockerized FastAPI backend for model deployment</li>
+                <li>Added observability with Prometheus/Grafana for system monitoring</li>
+                <li>Built Kafka-powered real-time data processing pipelines</li>
+                <li>Reduced inference time by 40% through model optimization</li>
+            </ul>
+        </div>
+        
+        <!-- More experience items would go here -->
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="item">
+            <div class="item-title">Masters in Applied Physics and Mathematics</div>
+            <div class="item-subtitle">Moscow Institute of Physics and Technology (MIPT)</div>
+            <div class="item-date">Graduated June 2024</div>
+            <p>Specialized in Applied Bioinformatics. Full scholarship via Opendoors Olympiad (Computer Science). GPA: 3.62.</p>
+        </div>
+        
+        <!-- More education items would go here -->
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Skills</h2>
+        
+        <div class="item">
+            <div class="item-title">Programming Languages</div>
+            <p>Python, CUDA C++, R, Golang, Java, SQL, JavaScript, TypeScript</p>
+        </div>
+        
+        <div class="item">
+            <div class="item-title">Frameworks</div>
+            <p>React, FastAPI, Django, TensorFlow, PyTorch, Spring Boot, Next.js</p>
+        </div>
+        
+        <!-- More skill items would go here -->
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Publications</h2>
+        
+        <div class="item">
+            <div class="item-title">GPU-accelerated Kendall distance computation for large or sparse data</div>
+            <div class="item-subtitle">Oxford GigaScience, 2024</div>
+            <p>DOI: 10.1093/gigascience/giae088</p>
+        </div>
+        
+        <!-- More publication items would go here -->
+    </div>
+</body>
+</html>
