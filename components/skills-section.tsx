@@ -93,7 +93,7 @@ export function SkillsSection({ skills }: SkillsProps) {
 
               <TabsContent value="libraries" className="space-y-4 pt-4">
                 <div className="h-[350px] w-full">
-                  <BubbleChart skills={skills.libraries} />
+                  <RadarSkillChart skills={skills.libraries} />
                 </div>
               </TabsContent>
             </Tabs>
@@ -109,7 +109,6 @@ export function SkillsSection({ skills }: SkillsProps) {
             <CardContent>
               <div className="h-[300px] w-full pt-4 flex justify-center">
                 <RadarSkillChart skills={skills.softSkills} /> 
-                <BubbleChart skills={skills.softSkills} /> 
               </div>
             </CardContent>
           </Card>
@@ -122,7 +121,6 @@ export function SkillsSection({ skills }: SkillsProps) {
             <CardContent>
               <div className="h-[300px]">
                 <PieSkillChart skills={skills.languages} />
-                <BubbleChart skills={skills.softSkills} /> 
               </div>
             </CardContent>
           </Card>

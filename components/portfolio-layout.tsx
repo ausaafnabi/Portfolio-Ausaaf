@@ -3,7 +3,6 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { usePathname } from "next/navigation"
 import { Code, Github, Layers, Mail, User, BookOpen } from "lucide-react"
 import {
   Sidebar,
@@ -30,7 +29,6 @@ interface PortfolioLayoutProps {
 }
 
 export function PortfolioLayout({ children }: PortfolioLayoutProps) {
-  const pathname = usePathname()
   const [activeSection, setActiveSection] = useState("about")
 
   // Handle scroll to update active section
@@ -59,6 +57,13 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  // Create a base path for assets that works with GitHub Pages
+  const getBasePath = () => {
+    // This will be replaced with your actual repo name if using a custom domain
+    // For username.github.io sites, this can be empty
+    return process.env.NODE_ENV === "production" ? "" : ""
   }
 
   return (
@@ -146,7 +151,7 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
           </SidebarContent>
           <SidebarFooter className="p-4">
             <Button asChild className="w-full">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={`${getBasePath()}/resume.pdf`} target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
             </Button>
